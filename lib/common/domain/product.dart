@@ -1,6 +1,8 @@
 import 'package:grocery_task/common/domain/category.dart';
 import 'package:grocery_task/common/domain/product_badge.dart';
 
+
+
 class Product {
   const Product({
     required this.name,
@@ -12,16 +14,17 @@ class Product {
     this.badge,
   });
 
-  factory Product.fromFirestore(DocumentSnapshot doc) {
-    final Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+  factory Product.fromFirestore(DocumentSnapshot documentSnapshot) {
+    final Map<String, dynamic> data =
+        documentSnapshot.data() as Map<String, dynamic>;
     return Product(
-        name: data["name"] as String,
-        price: data["price"] as double,
-        colorValue: data["colorValue"] as int,
-        badge: data["badge"],
-        category: data["category"],
-        description: data["description"] as String,
-        imageAsset: data["imageAsset"] as String);
+        name: data['name'] as String,
+        price: data['price'] as double,
+        colorValue: data['colorValue'] as int,
+        badge: data['badge'],
+        category: data['category'],
+        description: data['description'] as String,
+        imageAsset: data['imageAsset'] as String);
   }
 
   final String name;
@@ -39,3 +42,4 @@ class Product {
 class DocumentSnapshot {
   data() {}
 }
+
