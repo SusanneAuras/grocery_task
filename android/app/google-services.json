@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "123414188116",
+    "project_id": "grocery-task-susanne",
+    "storage_bucket": "grocery-task-susanne.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:123414188116:android:24cdea417dfc329810ddc1",
+        "android_client_info": {
+          "package_name": "com.example.grocery_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO0CVuSxeF_NC2oi362nbi-pCk5cpo8Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

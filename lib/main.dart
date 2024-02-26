@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_task/common/data/cart_repository.dart';
 import 'package:grocery_task/common/data/wishlist_repository.dart';
@@ -10,7 +11,13 @@ import 'package:grocery_task/features/overview/presentation/controllers/product_
 import 'package:grocery_task/grocery_app.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MultiProvider(
       providers: [

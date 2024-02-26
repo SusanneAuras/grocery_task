@@ -12,6 +12,18 @@ class Product {
     this.badge,
   });
 
+  factory Product.fromFirestore(DocumentSnapshot doc) {
+    final Map<String, dynamic> data = doc.data() as Map<String, dynamic>;
+    return Product(
+        name: data["name"] as String,
+        price: data["price"] as double,
+        colorValue: data["colorValue"] as int,
+        badge: data["badge"],
+        category: data["category"],
+        description: data["description"] as String,
+        imageAsset: data["imageAsset"] as String);
+  }
+
   final String name;
   final String description;
   final double price;
@@ -22,4 +34,8 @@ class Product {
   final int colorValue;
 
   final ProductBadge? badge;
+}
+
+class DocumentSnapshot {
+  data() {}
 }
