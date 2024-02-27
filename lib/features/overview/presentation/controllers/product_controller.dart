@@ -20,4 +20,9 @@ class ProductController extends ChangeNotifier {
       notifyListeners();
     });
   }
+
+  void resetProducts() async {
+    _productsRepository.deleteProductsFromFirestore();
+    _productsRepository.saveProductsToFirestore();
+  }
 }

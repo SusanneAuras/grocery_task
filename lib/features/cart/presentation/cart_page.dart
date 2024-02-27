@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:grocery_task/common/presentation/cart_controller.dart';
 import 'package:grocery_task/features/cart/presentation/cart_item.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/cart_controller.dart';
 import 'package:provider/provider.dart';
 
 class CartPage extends StatelessWidget {

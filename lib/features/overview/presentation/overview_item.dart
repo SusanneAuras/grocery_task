@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_task/common/domain/product.dart';
-import 'package:grocery_task/common/presentation/cart_controller.dart';
-import 'package:grocery_task/common/presentation/wishlist_controller.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/cart_controller.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/wishlist_controller.dart';
 import 'package:provider/provider.dart';
 
 class OverviewItem extends StatelessWidget {

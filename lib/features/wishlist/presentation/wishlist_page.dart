@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:grocery_task/common/presentation/wishlist_controller.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/wishlist_controller.dart';
 import 'package:grocery_task/features/wishlist/presentation/wishlist_item.dart';
 import 'package:provider/provider.dart';
 

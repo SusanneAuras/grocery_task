@@ -1,8 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:grocery_task/common/presentation/cart_controller.dart';
-import 'package:grocery_task/common/presentation/wishlist_controller.dart';
 import 'package:grocery_task/features/cart/presentation/cart_page.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/cart_controller.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/product_controller.dart';
+import 'package:grocery_task/features/overview/presentation/controllers/wishlist_controller.dart';
 import 'package:grocery_task/features/overview/presentation/overview_page.dart';
 import 'package:grocery_task/features/wishlist/presentation/wishlist_page.dart';
 import 'package:provider/provider.dart';
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final cartController = context.watch<CartController>();
     final wishlistController = context.watch<WishlistController>();
+    final productController = context.watch<ProductController>();
 
     return GestureDetector(
       onDoubleTap: () => FocusScope.of(context).unfocus(),
@@ -34,6 +36,11 @@ class _HomePageState extends State<HomePage> {
             const WishlistPage(),
           ][currentScreenIndex],
         ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              productController.resetProducts();
+            },
+            child: const Text("Reset")),
         bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: true,
           showUnselectedLabels: false,
